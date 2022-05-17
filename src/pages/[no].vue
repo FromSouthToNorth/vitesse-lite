@@ -3,7 +3,7 @@ const props = defineProps<{
   no: string
 }>()
 
-const index = $computed(() => props.no)
+const index = $computed(() => +props.no)
 let size = $(useStorage('size', 200))
 function enlarge() {
   size += 20
